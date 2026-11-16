@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f4ec">
+  <meta name="description" content="مخابز الأحلام في أبو نصير، حي الأمانة. مخبوزات ومعجنات وحلويات، بالإضافة إلى مطعم يقدم الحمص والفلافل. توصيل واستلام من الفرع.">
+  <title>مخابز الأحلام | مخبوزات وحلويات ومطعم</title>
+  <link rel="icon" href="/public/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/public/styles.css">
+  <script defer src="/public/app.js"></script>
+</head>
+<body>
+  <div class="top-strip">
+    <div class="container top-strip-inner">
+      <span class="top-note"><span class="top-dot"></span> مخبوزات، حلويات ومأكولات تحبّها العائلة</span>
+      <div class="top-contact"><span>أبو نصير · حي الأمانة</span><span class="top-divider"></span><a href="tel:0758795461" dir="ltr">0758795461</a></div>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="مخابز الأحلام - الرئيسية">
+        <img src="/public/images/logo.svg" alt="" width="52" height="52">
+        <span class="brand-copy"><strong>مخابز الأحلام</strong><small>طعم يجمعنا</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav" aria-label="التنقل الرئيسي">
+        <a class="nav-link active" href="#top">الرئيسية</a>
+        <a class="nav-link" href="#categories">أقسامنا</a>
+        <a class="nav-link" href="#products">المنتجات</a>
+        <a class="nav-link" href="#restaurant">المطعم</a>
+        <a class="nav-link" href="#about">من نحن</a>
+        <a class="nav-link" href="#location">تواصل معنا</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-button" id="openCart" aria-label="عرض سلة الطلبات"><span class="cart-icon">🛍</span><span>سلة الطلب</span><b id="cartCount">0</b></button>
+        <a class="header-phone" href="tel:0758795461" aria-label="اتصل بالمخبز">اتصل بنا <span>↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> من المخبز إلى مائدتكم</div>
+          <h1>كل ما تشتهيه،<br><em>في مكان واحد.</em></h1>
+          <p class="hero-description">من الخبز والمعجنات إلى الحلويات وأشهى أطباق الحمص والفلافل… أهلاً بكم في مخابز الأحلام.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#products">استكشف منتجاتنا <span>←</span></a>
+            <button class="button button-ghost" type="button" id="heroOrder">اطلب الآن</button>
+          </div>
+          <div class="hero-highlights">
+            <div class="highlight-item"><span class="highlight-icon">✦</span><span><b>٤ أقسام متنوعة</b><small>مخبوزات وحلويات ومطعم</small></span></div>
+            <div class="highlight-separator"></div>
+            <div class="highlight-item"><span class="highlight-icon">⌂</span><span><b>توصيل واستلام</b><small>اختر الطريقة الأنسب لك</small></span></div>
+          </div>
+        </div>
+        <div class="hero-visual-wrap">
+          <div class="hero-visual-bg"></div>
+          <img class="hero-visual" src="/public/images/hero-bakery.svg" alt="رسم توضيحي لمجموعة من المخبوزات والمعجنات والحلويات" fetchpriority="high">
+          <div class="hero-stamp"><span>صُنع</span><strong>بمحبة</strong><small>كل يوم</small></div>
+          <div class="hero-caption"><span class="caption-star">✳</span><span><b>مذاق يرافق أحلامكم</b><small>من المخبوزات إلى الحلويات</small></span></div>
+        </div>
+      </div>
+      <div class="hero-bottom-line"></div>
+    </section>
+
+    <section class="trust-row" aria-label="معلومات الخدمات">
+      <div class="container trust-inner">
+        <div><span class="trust-icon">✧</span><span>مخبوزات ومعجنات</span></div>
+        <div><span class="trust-icon">✿</span><span>حلويات متنوعة</span></div>
+        <div><span class="trust-icon">◉</span><span>مطعم حمص وفلافل</span></div>
+        <div><span class="trust-icon">⌖</span><span>أبو نصير – حي الأمانة</span></div>
+      </div>
+    </section>
+
+    <section class="section categories-section" id="categories">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="section-kicker">تصفّح حسب رغبتك</span><h2>أقسام <em>الأحلام</em></h2></div>
+          <p>كل قسم له حكايته… اختاروا ما تشتهونه واكتشفوا تشكيلتنا.</p>
+        </div>
+        <div class="category-grid" id="categoryGrid">
+          <a class="category-card" href="#products" data-category="bakery"><div class="category-art"><img src="/public/images/category-bread.svg" alt="" loading="lazy"><span class="category-number">01</span></div><div class="category-info"><div><h3>المخبوزات</h3><p>خبز يومي وخيارات متنوعة</p></div><span class="round-arrow">↙</span></div></a>
+          <a class="category-card" href="#products" data-category="pastries"><div class="category-art"><img src="/public/images/category-pastries.svg" alt="" loading="lazy"><span class="category-number">02</span></div><div class="category-info"><div><h3>المعجنات</h3><p>مناقيش وفطائر شهية</p></div><span class="round-arrow">↙</span></div></a>
+          <a class="category-card" href="#products" data-category="sweets"><div class="category-art"><img src="/public/images/category-sweets.svg" alt="" loading="lazy"><span class="category-number">03</span></div><div class="category-info"><div><h3>الحلويات</h3><p>كيك وحلويات للضيافة</p></div><span class="round-arrow">↙</span></div></a>
+          <a class="category-card" href="#restaurant" data-category="restaurant"><div class="category-art"><img src="/public/images/category-restaurant.svg" alt="" loading="lazy"><span class="category-number">04</span></div><div class="category-info"><div><h3>المطعم</h3><p>حمص وفلافل وأطباق شعبية</p></div><span class="round-arrow">↙</span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="container">
+        <div class="section-heading products-heading">
+          <div><span class="section-kicker">اختيارات من قائمتنا</span><h2>منتجات <em>تستحق التجربة</em></h2></div>
+          <p>تعرّفوا على مجموعة من المنتجات المتوفرة لدينا. الأسعار تُحدّد عند الطلب لحين تحديث القائمة الرسمية.</p>
+        </div>
+        <div class="product-toolbar">
+          <div class="filter-tabs" id="filterTabs" role="group" aria-label="تصفية المنتجات">
+            <button class="filter-tab active" data-filter="all">الكل</button>
+            <button class="filter-tab" data-filter="bakery">المخبوزات</button>
+            <button class="filter-tab" data-filter="pastries">المعجنات</button>
+            <button class="filter-tab" data-filter="sweets">الحلويات</button>
+            <button class="filter-tab" data-filter="restaurant">المطعم</button>
+          </div>
+          <span class="product-count" id="productCount">جاري تحميل المنتجات…</span>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite">
+          <div class="loading-card">جاري تحميل المنتجات…</div>
+        </div>
+        <div class="products-footnote"><span>ⓘ</span> الصور والرسومات المعروضة مؤقتة لأغراض التصميم، ويمكن استبدالها بصور المنتجات الفعلية.</div>
+      </div>
+    </section>
+
+    <section class="restaurant-section" id="restaurant">
+      <div class="container restaurant-grid">
+        <div class="restaurant-visual"><img src="/public/images/category-restaurant.svg" alt="رسم توضيحي لأطباق الحمص والفلافل" loading="lazy"><span class="restaurant-badge">من قائمة المطعم</span></div>
+        <div class="restaurant-copy"><span class="section-kicker light-kicker">ركن المطعم</span><h2>على الأصول…<br><em>حمص وفلافل</em></h2><p>إلى جانب المخبوزات والحلويات، يضم مخبز الأحلام مطعماً داخلياً يقدم أطباقاً شعبية محبوبة تناسب فطوركم ووجباتكم.</p>
+          <div class="restaurant-menu-list"><span>حمص</span><span>فلافل</span><span>فتة</span><span>فول</span><span>مسبحة</span><span>بطاطا</span></div>
+          <a class="button button-light" href="#products" data-jump-filter="restaurant">استعرض قائمة المطعم <span>←</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-band">
+      <div class="container service-band-inner"><div class="service-symbol">⌂</div><div><span class="section-kicker">على راحتكم</span><h2>اطلبوا بالطريقة التي تناسبكم</h2><p>نوفر خيار التوصيل أو الاستلام من الفرع. تفاصيل التوصيل يتم تأكيدها عند مراجعة الطلب.</p></div><button class="button button-primary" id="serviceOrder">ابدأ طلبك <span>←</span></button></div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-art"><div class="about-circle"></div><img src="/public/images/category-bread.svg" alt="رسم توضيحي للخبز" loading="lazy"><span class="about-note">مخابز الأحلام<br><b>طعم يجمعنا</b></span></div>
+        <div class="about-copy"><span class="section-kicker">أهلاً بكم في مخابز الأحلام</span><h2>من الخبز اليومي<br>إلى <em>حلو الضيافة</em></h2><p>مخابز الأحلام وجهتكم للمخبوزات والمعجنات والحلويات، مع مطعم داخلي يقدم الحمص والفلافل وأطباقاً شعبية. نجمع خيارات متنوعة في مكان واحد لتجدوا ما يناسب مائدتكم.</p><div class="about-points"><div><b>01</b><span>مخبوزات ومعجنات</span></div><div><b>02</b><span>حلويات وكيك</span></div><div><b>03</b><span>مطعم داخلي</span></div></div><a class="text-link" href="#location">زورونا في أبو نصير <span>←</span></a></div>
+      </div>
+    </section>
+
+    <section class="location-section" id="location">
+      <div class="container location-grid">
+        <div class="location-copy"><span class="section-kicker">نحن قريبون منكم</span><h2>زورونا في <em>أبو نصير</em></h2><p>يسعدنا استقبالكم في فرع مخابز الأحلام – حي الأمانة.</p><div class="location-details"><div class="detail-row"><span class="detail-icon pin-icon">⌖</span><div><small>عنوان الفرع</small><strong>الأردن، عمّان، أبو نصير، حي الأمانة</strong></div></div><div class="detail-row"><span class="detail-icon">☎</span><div><small>للاتصال والاستفسار</small><a href="tel:0758795461" dir="ltr">0758795461</a></div></div><div class="detail-row"><span class="detail-icon">↗</span><div><small>خدمات الطلب</small><strong>توصيل أو استلام من الفرع</strong></div></div></div><a class="button button-primary map-link" href="https://www.google.com/maps/search/?api=1&query=Abu+Nseir%2C+Hay+Al+Amana%2C+Amman%2C+Jordan" target="_blank" rel="noopener">افتح الموقع على Google Maps <span>↗</span></a></div>
+        <div class="map-card"><div class="map-topline"><span><i></i> موقع الفرع</span><small>أبو نصير – حي الأمانة</small></div><div class="map-frame-wrap"><iframe title="خريطة منطقة أبو نصير وحي الأمانة في عمّان" src="https://www.google.com/maps?q=Abu%20Nseir%2C%20Hay%20Al%20Amana%2C%20Amman%2C%20Jordan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-overlay-note"><span class="map-pin">●</span><span><b>منطقة الفرع</b><small>الموقع تقريبي، يرجى تأكيد النقطة الدقيقة قبل النشر</small></span></div></div><p class="map-disclaimer">الخريطة تعرض المنطقة المذكورة فقط، وليست تثبيتاً للإحداثيات الدقيقة للمخبز.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main"><div class="footer-brand"><a class="brand brand-footer" href="#top"><img src="/public/images/logo-light.svg" alt="" width="54" height="54"><span class="brand-copy"><strong>مخابز الأحلام</strong><small>طعم يجمعنا</small></span></a><p>مخبوزات ومعجنات وحلويات، ومطعم داخلي يقدم أطباق الحمص والفلافل.</p></div><div class="footer-col"><h3>تصفح الموقع</h3><a href="#categories">أقسامنا</a><a href="#products">المنتجات</a><a href="#restaurant">المطعم</a><a href="#about">من نحن</a></div><div class="footer-col"><h3>الأقسام</h3><a href="#products" data-footer-filter="bakery">المخبوزات</a><a href="#products" data-footer-filter="pastries">المعجنات</a><a href="#products" data-footer-filter="sweets">الحلويات</a><a href="#restaurant">المطعم</a></div><div class="footer-col footer-contact"><h3>تواصلوا معنا</h3><a href="tel:0758795461" dir="ltr">0758795461</a><span>أبو نصير، حي الأمانة</span><span>توصيل واستلام من الفرع</span><a href="https://www.google.com/maps/search/?api=1&query=Abu+Nseir%2C+Hay+Al+Amana%2C+Amman%2C+Jordan" target="_blank" rel="noopener">عرض الموقع على الخريطة ↗</a></div></div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> مخابز الأحلام. جميع الحقوق محفوظة.</span><a href="/admin" class="admin-shortcut">دخول الإدارة</a><span>صُمم بمحبة في عمّان</span></div>
+  </footer>
+
+  <button class="floating-cart" id="floatingCart" aria-label="فتح سلة الطلبات">🛍 <span id="floatingCartCount">0</span></button>
+
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle">
+    <div class="drawer-header"><div><span class="section-kicker">طلبكم على بعد خطوة</span><h2 id="cartTitle">سلة الطلبات</h2></div><button class="icon-button" id="closeCart" aria-label="إغلاق السلة">×</button></div>
+    <div class="cart-items" id="cartItems"><div class="empty-cart"><span>🧺</span><b>السلة فارغة حالياً</b><small>أضيفوا المنتجات التي ترغبون بها لتبدأوا الطلب.</small></div></div>
+    <div class="cart-summary"><div class="summary-line"><span>عدد القطع</span><b id="cartTotalQty">0</b></div><div class="summary-line"><span>الأسعار</span><b>تُحدد عند التأكيد</b></div><button class="button button-primary checkout-button" id="checkoutButton" disabled>متابعة وإرسال الطلب <span>←</span></button><p>لا يوجد دفع إلكتروني في هذه النسخة. سيقوم المخبز بمراجعة الطلب وتأكيد التفاصيل.</p></div>
+  </aside>
+
+  <div class="modal-backdrop" id="checkoutBackdrop"></div>
+  <section class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" aria-hidden="true">
+    <div class="modal-heading"><div><span class="section-kicker">تفاصيل التواصل والاستلام</span><h2 id="checkoutTitle">إكمال الطلب</h2></div><button class="icon-button" id="closeCheckout" aria-label="إغلاق">×</button></div>
+    <form id="checkoutForm" class="checkout-form">
+      <div class="form-row"><label>الاسم الكامل<input name="customer_name" required minlength="2" maxlength="100" placeholder="اكتب اسمك"></label><label>رقم الهاتف<input name="phone" type="tel" required maxlength="30" placeholder="07xxxxxxxx" dir="ltr"></label></div>
+      <fieldset class="fulfillment-field"><legend>طريقة استلام الطلب</legend><label class="radio-card"><input type="radio" name="fulfillment_type" value="pickup" checked><span><b>استلام من الفرع</b><small>أبو نصير – حي الأمانة</small></span></label><label class="radio-card"><input type="radio" name="fulfillment_type" value="delivery"><span><b>توصيل</b><small>سيتم تأكيد توفر التوصيل والرسوم عند مراجعة الطلب</small></span></label></fieldset>
+      <label id="addressLabel" class="address-label hidden">عنوان التوصيل<input name="address" id="deliveryAddress" maxlength="300" placeholder="المنطقة، الشارع، أقرب معلم"></label>
+      <label>ملاحظات إضافية <span class="optional">(اختياري)</span><textarea name="notes" rows="3" maxlength="500" placeholder="أي تفاصيل تساعدنا في تجهيز طلبك"></textarea></label>
+      <div class="checkout-notice"><span>ⓘ</span><p>إرسال الطلب لا يعني تأكيده نهائياً. سيتواصل المخبز معك لمراجعة التوفر والتفاصيل والأسعار.</p></div>
+      <div class="form-error" id="checkoutError" role="alert"></div>
+      <button class="button button-primary form-submit" type="submit">إرسال الطلب <span>←</span></button>
+    </form>
+    <div class="order-success hidden" id="orderSuccess"><div class="success-mark">✓</div><h3>وصلنا طلبك!</h3><p id="successMessage">تم استلام الطلب، وسيتم التواصل معك لتأكيد التفاصيل.</p><div class="order-reference" id="orderReference"></div><button class="button button-primary" id="finishOrder">متابعة التصفح</button></div>
+  </section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

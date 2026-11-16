@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f4ec">
+  <title>لوحة إدارة مخابز الأحلام</title>
+  <link rel="icon" href="/public/images/logo.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/public/admin.css"><script defer src="/public/admin.js"></script>
+</head>
+<body class="admin-body">
+  <section class="login-screen" id="loginScreen">
+    <div class="login-decoration"><div class="login-circle"></div><img src="/public/images/hero-bakery.svg" alt="رسم توضيحي للمخبوزات"></div>
+    <div class="login-card">
+      <a class="admin-brand" href="/"><img src="/public/images/logo.svg" alt=""><span><b>مخابز الأحلام</b><small>لوحة الإدارة</small></span></a>
+      <span class="admin-kicker">مساحة العمل الخاصة</span><h1>مرحباً بعودتك</h1><p>سجّل الدخول لإدارة المنتجات والطلبات.</p>
+      <form id="loginForm"><label>اسم المستخدم<input name="username" autocomplete="username" required placeholder="اسم المستخدم"></label><label>كلمة المرور<input name="password" type="password" autocomplete="current-password" required placeholder="كلمة المرور"></label><div class="admin-error" id="loginError" role="alert"></div><button class="admin-primary full-width" type="submit">تسجيل الدخول <span>←</span></button></form>
+      <div class="login-help"><b>أول مرة؟</b><span>أنشئ حساب المدير من سطر الأوامر قبل تسجيل الدخول. راجع ملف README.</span></div>
+      <a class="back-home" href="/">← العودة إلى الموقع</a>
+    </div>
+  </section>
+
+  <div class="admin-app hidden" id="adminApp">
+    <aside class="admin-sidebar" id="adminSidebar">
+      <div class="sidebar-brand"><img src="/public/images/logo-light.svg" alt=""><span><b>مخابز الأحلام</b><small>لوحة الإدارة</small></span></div>
+      <div class="sidebar-caption">القائمة الرئيسية</div>
+      <nav class="sidebar-nav">
+        <button class="side-link active" data-page="overview"><span>▦</span> نظرة عامة</button>
+        <button class="side-link" data-page="products"><span>▤</span> المنتجات</button>
+        <button class="side-link" data-page="categories"><span>▥</span> الأقسام</button>
+        <button class="side-link" data-page="orders"><span>▣</span> الطلبات <i id="sidebarNewOrders">0</i></button>
+      </nav>
+      <div class="sidebar-bottom"><a href="/" target="_blank" rel="noopener">↗ عرض الموقع</a><button id="logoutButton">⇥ تسجيل الخروج</button></div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar"><div class="topbar-start"><button class="sidebar-toggle" id="sidebarToggle" aria-label="فتح القائمة">☰</button><div><span class="admin-kicker">مساحة الإدارة</span><h1 id="pageTitle">نظرة عامة</h1></div></div><div class="admin-user"><span class="user-avatar">م</span><span><b id="adminUsername">مدير المخبز</b><small>مدير النظام</small></span></div></header>
+
+      <section class="admin-page active" id="page-overview"><div class="welcome-banner"><div><span>أهلاً بك في إدارة مخابز الأحلام</span><h2>صباح الخير، لنبدأ يومنا.</h2><p>تابع المنتجات والطلبات من مكان واحد.</p></div><div class="welcome-mark">✳</div></div>
+        <div class="stats-grid"><article class="stat-card"><div class="stat-icon peach">▤</div><span>إجمالي المنتجات</span><b id="statProducts">—</b><small>جميع المنتجات المسجلة</small></article><article class="stat-card"><div class="stat-icon green">✓</div><span>المنتجات المتوفرة</span><b id="statAvailable">—</b><small>جاهزة للعرض والطلب</small></article><article class="stat-card"><div class="stat-icon gold">✉</div><span>طلبات جديدة</span><b id="statNew">—</b><small>تحتاج إلى مراجعة</small></article><article class="stat-card"><div class="stat-icon blue">◷</div><span>قيد التجهيز</span><b id="statPreparing">—</b><small>طلبات يتم تجهيزها</small></article></div>
+        <div class="admin-panel"><div class="panel-heading"><div><h3>أحدث الطلبات</h3><p>آخر الطلبات التي وصلت إلى المخبز</p></div><button class="subtle-button" data-goto="orders">عرض كل الطلبات ←</button></div><div class="table-wrap"><table><thead><tr><th>رقم الطلب</th><th>العميل</th><th>طريقة الاستلام</th><th>الحالة</th><th>التاريخ</th></tr></thead><tbody id="recentOrders"><tr><td colspan="5" class="table-empty">لا توجد طلبات حالياً.</td></tr></tbody></table></div></div>
+      </section>
+
+      <section class="admin-page" id="page-products"><div class="page-toolbar"><div><h2>إدارة المنتجات</h2><p>أضف المنتجات أو حدّث بياناتها وأسعارها وحالة توفرها.</p></div><button class="admin-primary" id="addProductButton">＋ إضافة منتج</button></div><div class="admin-panel"><div class="panel-heading"><div><h3>قائمة المنتجات</h3><p id="productsSummary">—</p></div><input class="table-search" id="productSearch" placeholder="ابحث عن منتج…" aria-label="بحث عن منتج"></div><div class="table-wrap"><table><thead><tr><th>المنتج</th><th>القسم</th><th>السعر</th><th>التوفر</th><th>إجراءات</th></tr></thead><tbody id="productsTable"><tr><td colspan="5" class="table-empty">جاري التحميل…</td></tr></tbody></table></div></div></section>
+
+      <section class="admin-page" id="page-categories"><div class="page-toolbar"><div><h2>إدارة الأقسام</h2><p>الأقسام الرئيسية التي تظهر في واجهة المتجر.</p></div></div><div class="category-admin-grid"><div class="admin-panel"><div class="panel-heading"><div><h3>الأقسام الحالية</h3><p>يمكن حذف القسم إذا لم يكن يحتوي على منتجات.</p></div></div><div id="categoriesList" class="categories-list"></div></div><div class="admin-panel category-form-panel"><div class="panel-heading"><div><h3>إضافة قسم</h3><p>أضف قسماً جديداً عند الحاجة.</p></div></div><form id="categoryForm" class="admin-form"><input type="hidden" name="id"><label>اسم القسم<input name="name" required maxlength="70" placeholder="مثال: المشروبات"></label><label>معرّف القسم بالإنجليزية<input name="slug" required maxlength="70" pattern="[a-z0-9-]+" dir="ltr" placeholder="مثال: drinks"></label><label>وصف مختصر<input name="description" maxlength="180" placeholder="وصف يظهر في إدارة الأقسام"></label><label>الصورة الافتراضية<select name="image_path"><option value="images/category-bread.svg">المخبوزات</option><option value="images/category-pastries.svg">المعجنات</option><option value="images/category-sweets.svg">الحلويات</option><option value="images/category-restaurant.svg">المطعم</option></select></label><div class="admin-error" id="categoryError"></div><div class="modal-actions"><button class="subtle-button hidden" type="button" id="cancelCategoryEdit">إلغاء التعديل</button><button class="admin-primary" id="saveCategoryButton" type="submit">حفظ القسم</button></div></form></div></div></section>
+
+      <section class="admin-page" id="page-orders"><div class="page-toolbar"><div><h2>إدارة الطلبات</h2><p>راجع تفاصيل الطلبات وحدّث حالتها حسب سير العمل.</p></div><button class="subtle-button" id="refreshOrders">↻ تحديث</button></div><div class="admin-panel"><div class="panel-heading"><div><h3>جميع الطلبات</h3><p>يتم حفظ الطلبات في قاعدة البيانات المحلية.</p></div><select class="table-search" id="orderFilter" aria-label="تصفية الطلبات"><option value="all">كل الحالات</option><option value="new">جديدة</option><option value="accepted">مقبولة</option><option value="preparing">قيد التجهيز</option><option value="ready">جاهزة</option><option value="completed">مكتملة</option><option value="cancelled">ملغاة</option></select></div><div id="ordersList" class="orders-list"><div class="table-empty">جاري تحميل الطلبات…</div></div></div></section>
+    </main>
+  </div>
+
+  <div class="admin-modal-backdrop" id="productModalBackdrop"></div>
+  <section class="admin-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="productModalTitle"><div class="modal-head"><div><span class="admin-kicker">كتالوج المنتجات</span><h2 id="productModalTitle">إضافة منتج جديد</h2></div><button class="modal-close" id="closeProductModal">×</button></div><form id="productForm" class="admin-form product-form"><input type="hidden" name="id"><div class="form-grid"><label>اسم المنتج<input name="name" required maxlength="100" placeholder="اسم المنتج"></label><label>القسم<select name="category_id" id="productCategory" required></select></label><label class="span-two">وصف المنتج<textarea name="description" rows="2" maxlength="300" placeholder="وصف مختصر للمنتج"></textarea></label><label>السعر بالدينار الأردني<input name="price_jod" type="number" step="0.001" min="0" placeholder="اتركه فارغاً إذا لم يُحدد السعر"></label><label>الصورة الافتراضية<select name="image_path" id="productImageSelect"><option value="images/category-bread.svg">صورة المخبوزات</option><option value="images/category-pastries.svg">صورة المعجنات</option><option value="images/category-sweets.svg">صورة الحلويات</option><option value="images/category-restaurant.svg">صورة المطعم</option></select></label><label>رفع صورة خاصة بالمنتج<input type="file" id="productImageUpload" accept="image/jpeg,image/png,image/webp"><small class="field-hint">JPG أو PNG أو WebP، بحد أقصى 2 ميغابايت.</small></label><label>ترتيب العرض<input name="sort_order" type="number" min="0" value="0"></label><div class="checkbox-wrap"><label><input type="checkbox" name="is_available" checked> المنتج متوفر</label><label><input type="checkbox" name="is_featured"> منتج مميز</label></div></div><div class="admin-error" id="productError"></div><div class="modal-actions"><button type="button" class="subtle-button" id="cancelProduct">إلغاء</button><button type="submit" class="admin-primary" id="saveProductButton">حفظ المنتج</button></div></form></section>
+  <div class="admin-toast" id="adminToast" role="status"></div>
+</body>
+</html>
